@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import styles from "./Main.module.css";
 import { Headline } from "@/components/Headline";
 import { Links } from "@/components/Links";
 
@@ -10,7 +10,9 @@ export function Main(props) {
   return (
     <>
       <main className={`${styles.main} ${inter.className}`}>
-        <Headline title={props.title} />
+        <Headline>
+          <code className={styles.code}>pages/{props.title}.js</code>
+        </Headline>
 
         <div className={styles.center}>
           <Image
